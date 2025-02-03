@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Portifólio Guilherme</title>
+</head>
+<body class="bg-black">
+  <header>
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logoGuiDev.svg" class="img-fluid img-logo" alt="Logo Guilherme de Souza Dev portifólio">
+        </a>
+
+        <button id="buttonHamb" class="navbar-toggler mt-5 me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download CV</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container-fluid bg-cloud bg-danger d-flex">
+      <img src="./images/nuvens (1).svg" class="clouds" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (2).svg" class="clouds1" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (3).svg" class="clouds2" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (4).svg" class="clouds3" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (5).svg" class="clouds4" alt="Fundo de nuvens se movimentando">
+
+      <img src="./images/nuvens (1).svg" class="cloudsCont" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (2).svg" class="clouds1Cont" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (3).svg" class="clouds2Cont" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (4).svg" class="clouds3Cont" alt="Fundo de nuvens se movimentando">
+      <img src="./images/nuvens (5).svg" class="clouds4Cont" alt="Fundo de nuvens se movimentando">
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center fs-3">Reuna as esferas do dragão para fazer um desejo</h1>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col text-center d-none">
+          <img src="./images/esferas do dragao.jpg" class="dragon-ball" alt="Esferas do dragão reunidas e prontas para realizar seu desejo">
+        </div>
+        
+        <div class="col d-none wishes-Gui z-3">
+          <h5>Faça seu desejo</h5>
+          <ol>
+            <li class="wishe1">Sobre o Gui</li>
+            <li class="wishe2">Experiências</li>
+            <li class="wishe3">linguagens</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="modals d-none">
+        <span class="closeModal btn btn-danger d-none">X</span>
+    
+        <!-- modal sobre o Gui -->
+        <div class="modal1 bg-primary text-center d-none">
+          <h2>Gui e foda</h2>
+        </div>
+
+        <!-- modal experiencia -->
+        <div class="modal2 bg-primary text-center d-none">
+          <h2>trabalhou bastante</h2>
+        </div>
+
+        <!-- modal linguagens -->
+        <div class="modal3 bg-primary text-center d-none">
+          <h2>sabe JS,REACT,LARAVEL</h2>
+        </div>
+
+        <!-- modal -->
+        <div class="modal bg-primary text-center d-none">
+          <h2>Sei la</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="img-Goku d-flex">
+      <img src="./images/GokuSSJ.svg" class="img-fluid" alt="Goku super sayajin procurando as esferas do dragão">
+      <div><h3 class="bg-info bg-gradient rounded m-5 p-5">Oi, eu sou o Goku!</h3></div>
+    </div>
+
+    <div class="starDragon starDragon1">
+      <img src="./images/esfera_estrela_1.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="starDragon starDragon2">
+      <img src="./images/esfera_estrela_2.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="starDragon starDragon3">
+      <img src="./images/esfera_estrela_3.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="starDragon starDragon4">
+      <img src="./images/esfera_estrela_4.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="starDragon starDragon5">
+      <img src="./images/esfera_estrela_5.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="starDragon starDragon6">
+      <img src="./images/esfera_estrela_6.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="starDragon starDragon7">
+      <img src="./images/esfera_estrela_7.svg" class="img-fluid" alt="">
+    </div>
+    
+  </main>
+
+  <footer class="text-center">Todos os direitos reservados</footer>
+
+  <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
