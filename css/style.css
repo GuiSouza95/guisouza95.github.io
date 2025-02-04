@@ -78,7 +78,7 @@ h2{
 
 .starDragon1{
     position: absolute;
-    top: 200px;
+    top: 400px;
     right: 0;
     cursor: pointer;
     animation: sphere 5s 3s infinite;
@@ -225,12 +225,21 @@ footer{
         opacity: 1;
     }
     30%{
-        opacity: 0;
+        opacity: 0.3;
     }
     50%{
         opacity: 1;
     }
     100%{
-        opacity: 0;
+        opacity: 0.3;
+    }
+}
+
+@keyframes sphereGather{
+    from{
+        transform: rotate(0deg) translate(100px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translate(100px) rotate(-360deg);
     }
 }

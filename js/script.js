@@ -60,4 +60,28 @@ if(closeModal){
 
 // Função das esferas
 
+const sphereDragon = document.querySelectorAll('.starDragon');
+const countSphere = document.querySelector('.count');
+var count = 0;
+
+if(sphereDragon){
+    sphereDragon.forEach((sphere,index) =>{
+        sphere.onclick=()=>{
+            sphere.style.animation='none';
+
+            sphere.style.transition='all 1s ease-in-out';
+            sphere.style.top='70%';
+            sphere.style.left='80%';
+            
+            sphere.style.animation='sphereGather 5s linear infinite';
+
+            count++;
+            countSphere.textContent=count;
+
+            sphere.style.cursor='default';
+            sphere.style.pointerEvents='none';
+        }
+    })
+}
+
 // Fim da função das esferas
