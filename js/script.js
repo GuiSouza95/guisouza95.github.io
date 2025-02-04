@@ -65,21 +65,36 @@ const countSphere = document.querySelector('.count');
 var count = 0;
 
 if(sphereDragon){
-    sphereDragon.forEach((sphere,index) =>{
+    sphereDragon.forEach((sphere) =>{
         sphere.onclick=()=>{
-            sphere.style.animation='none';
+            if(sphere.classList.contains('starDragon1')){
+                sphere.style.animation='none';
 
-            sphere.style.transition='all 1s ease-in-out';
-            sphere.style.top='70%';
-            sphere.style.left='80%';
-            
-            sphere.style.animation='sphereGather 5s linear infinite';
+                sphere.style.transition='all 1s ease-in-out';
+                sphere.style.top='70%';
+                sphere.style.left='80%';
 
-            count++;
-            countSphere.textContent=count;
+                sphere.style.pointerEvents='none';
+                sphere.style.cursor='default';
 
-            sphere.style.cursor='default';
-            sphere.style.pointerEvents='none';
+                count++;
+                countSphere.textContent=count;
+
+            }else{      
+                          
+                sphere.style.animation='none';
+
+                sphere.style.transition='all 1s ease-in-out';
+                sphere.style.top='70%';
+                sphere.style.left='80%';
+                count++;
+                sphere.style.animation=`sphereGather ${1+count}s 1s linear infinite`;
+
+                countSphere.textContent=count;
+
+                sphere.style.cursor='default';
+                sphere.style.pointerEvents='none';
+            }
         }
     })
 }
