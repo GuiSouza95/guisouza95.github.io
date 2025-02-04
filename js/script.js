@@ -81,7 +81,7 @@ if(sphereDragon){
                 countSphere.textContent=count;
 
             }else{      
-                          
+
                 sphere.style.animation='none';
 
                 sphere.style.transition='all 1s ease-in-out';
@@ -95,8 +95,89 @@ if(sphereDragon){
                 sphere.style.cursor='default';
                 sphere.style.pointerEvents='none';
             }
+
+            if(count === 7){
+                setTimeout(function(){
+                    document.querySelector('.text-goku').textContent='Apareça Shenlong!';
+                }, 1000);
+                
+
+                setTimeout(function(){
+                    document.querySelector('.Shenlong').classList.remove('d-none');
+                    document.querySelector('body').classList.add('bg-black');
+                }, 3000);
+            }
         }
     })
 }
 
 // Fim da função das esferas
+
+// Função da fala do Goku
+
+const frase1 = document.querySelector('.frase1');
+const frase2 = document.querySelector('.frase2');
+const frase3 = document.querySelector('.frase3');
+const frase4 = document.querySelector('.frase4');
+const frase5 = document.querySelector('.frase5');
+const frase6 = document.querySelector('.frase6');
+const frase7 = document.querySelector('.frase7');
+const frase8 = document.querySelector('.frase8');
+
+const audio = document.getElementById('audio');
+
+let audioPlaying = false;
+
+function playAudio(inicio,fim){
+    if(audioPlaying){
+        audio.pause();
+    }
+
+    audio.currentTime = inicio;
+    audio.play();
+    audioPlaying = true;
+
+    setTimeout(function(){
+        audio.pause();
+        audioPlaying = false;
+    }, (fim-inicio)*1000);
+}
+
+frase1.addEventListener('click', function(){
+    playAudio(0,2);
+})
+frase2.addEventListener('click', function(){
+    playAudio(3,6);
+})
+frase3.addEventListener('click', function(){
+    playAudio(7,11);
+})
+frase4.addEventListener('click', function(){
+    playAudio(12,15);
+})
+frase5.addEventListener('click', function(){
+    playAudio(16,18);
+})
+frase6.addEventListener('click', function(){
+    playAudio(19,21);
+})
+frase7.addEventListener('click', function(){
+    playAudio(22,27);
+})
+frase8.addEventListener('click', function(){
+    playAudio(28,35);
+});
+
+window.onload = function(){
+    setTimeout(function(){
+        playAudio(0,2);
+    }, 3000);
+}
+
+// Fim da função da fala do Goku
+
+// Função de trocar falas do Goku
+
+
+
+// Fim da função de trocar falas do Goku
