@@ -2,11 +2,13 @@
 
 const Shenlong = document.querySelector('.Shenlong');
 const wishesList = document.querySelector('.wishes-Gui');
+const textGoku = document.querySelector('.text-goku');
 
 if (Shenlong){
     Shenlong.onclick =()=>{
         wishesList.classList.remove('d-none');
         wishesList.classList.add('bg-danger');
+        textGoku.classList.add('d-none');
     };
 }
 
@@ -79,6 +81,10 @@ var count = 0;
 if(sphereDragon){
     sphereDragon.forEach((sphere) =>{
         sphere.onclick=()=>{
+            audio.pause();
+            audioPlaying=false;
+            clearTimeout(nextPhraseTimeout);
+            
             if(sphere.classList.contains('starDragon1')){
                 sphere.style.animation='none';
 
@@ -102,6 +108,8 @@ if(sphereDragon){
                 count++;
                 sphere.style.animation=`sphereGather ${1+count}s 1s linear infinite`;
 
+                document.querySelector('.text-goku').innerHTML='Já encontrou <br>' + count + ' esferas';
+
                 countSphere.textContent=count;
 
                 sphere.style.cursor='default';
@@ -111,11 +119,13 @@ if(sphereDragon){
             if(count === 7){
                 setTimeout(function(){
                     document.querySelector('.text-goku').textContent='Apareça Shenlong!';
+                    document.querySelector('.sphere').classList.add('d-none');
                 }, 1000);
                 
 
                 setTimeout(function(){
-                    document.querySelector('.Shenlong').classList.remove('d-none');
+                    Shenlong.classList.remove('d-none');
+                    Shenlong.classList.add('appearShenlong');
                     document.querySelector('body').classList.add('bg-black');
                     document.querySelector('.bg-cloud').classList.add('d-none');
                 }, 3000);
@@ -128,19 +138,21 @@ if(sphereDragon){
 
 // Função da fala do Goku
 
-const frase1 = document.querySelector('.frase1');
-const frase2 = document.querySelector('.frase2');
-const frase3 = document.querySelector('.frase3');
-const frase4 = document.querySelector('.frase4');
-const frase5 = document.querySelector('.frase5');
-const frase6 = document.querySelector('.frase6');
-const frase7 = document.querySelector('.frase7');
+const frases= [
+    {inicio: 0, fim: 2, elemento: document.querySelector('.frase1')},
+    {inicio: 2, fim: 7, elemento: document.querySelector('.frase2')},
+    {inicio: 7, fim: 12, elemento: document.querySelector('.frase3')},
+    {inicio: 12, fim: 19, elemento: document.querySelector('.frase4')},
+    {inicio: 19, fim: 22, elemento: document.querySelector('.frase5')},
+    {inicio: 22, fim: 28, elemento: document.querySelector('.frase6')},
+    {inicio: 28, fim: 35, elemento: document.querySelector('.frase7')}
+];
 
 const playAudioGoku = document.querySelector('.Goku-ssj');
 
 const audio = document.getElementById('audio');
 
-let countFrase = 1;
+let index = 0;
 
 let audioPlaying = false;
 
@@ -165,68 +177,26 @@ function playAudio(inicio,fim){
     }, (fim-inicio)*1000);
 }
 
-function nextPhrase(){
-    countFrase++;
+let nextPhraseTimeout;
 
-    if(countFrase === 2){
-        playAudio(2,7);
-        frase1.classList.add('d-none');
-        frase2.classList.remove('d-none');
-    }else if(countFrase === 3){
-        playAudio(7,12);
-        frase2.classList.add('d-none');
-        frase3.classList.remove('d-none');
-    }else if(countFrase === 4){
-        playAudio(12,19);
-        frase3.classList.add('d-none');
-        frase4.classList.remove('d-none');
-    }else if(countFrase === 5){
-        playAudio(19,22);
-        frase4.classList.add('d-none');
-        frase5.classList.remove('d-none');
-    }else if(countFrase === 6){
-        playAudio(22,28);
-        frase5.classList.add('d-none');
-        frase6.classList.remove('d-none');
-    }else if(countFrase === 7){
-        playAudio(28,35);
-        frase6.classList.add('d-none');
-        frase7.classList.remove('d-none');
+function nextPhrase(){
+    if(index<frases.length){
+        if(index > 0){
+            frases[index - 1].elemento.classList.add('d-none');
+        }
+        frases[index].elemento.classList.remove('d-none');
+        playAudio(frases[index].inicio, frases[index].fim);
+
+        let delay = (frases[index].fim - frases[index].inicio)*1100;
+        index++;
+        nextPhraseTimeout = setTimeout(nextPhrase,delay);
     }
 }
-
-    frase1.addEventListener('click', function(){
-        playAudio(0,2);
-        nextPhrase();
-    })
-    frase2.addEventListener('click', function(){
-        playAudio(2,7);
-        nextPhrase();
-    })
-    frase3.addEventListener('click', function(){
-        playAudio(7,12);
-        nextPhrase();
-    })
-    frase4.addEventListener('click', function(){
-        playAudio(12,19);
-        nextPhrase();
-    })
-    frase5.addEventListener('click', function(){
-        playAudio(19,22);
-        nextPhrase();
-    })
-    frase6.addEventListener('click', function(){
-        playAudio(22,28);
-        nextPhrase();
-    })
-    frase7.addEventListener('click', function(){
-        playAudio(28,35);
-        nextPhrase();
-    });
 
 window.onload = function(){
     setTimeout(function(){
         playAudio(0,2);
+        nextPhrase();
     }, 2000);
 }
 

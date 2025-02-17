@@ -67,10 +67,6 @@ h2{
     cursor: pointer;
 }
 
-.text-progress span{
-
-}
-
 .text-progress{
     width: 90%;
 }
@@ -147,6 +143,20 @@ h2{
     rotate: -35deg;
     z-index: 5;
     cursor: pointer;
+}
+
+/* Desejos */
+
+.wishes-Gui{
+    border-radius: 10%;
+    padding: 15px;
+}
+
+.modal-wishes{
+    position: absolute;
+    width: 28%;
+    left: 25%;
+    top: 15%;
 }
 
 /* Footer */
@@ -271,6 +281,31 @@ footer{
     100%{
         filter: drop-shadow(0 0 100px rgba(255,255,255,1)) drop-shadow(0 0 150px rgba(255,255,255,1)) drop-shadow(0 0 200px rgba(255,255,255,1));
     }
+}
+
+@keyframes appearShenlong{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.appearShenlong{
+    animation: appearShenlong 2s forwards;
 }
 
 .brilho{
