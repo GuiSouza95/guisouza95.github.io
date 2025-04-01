@@ -28,10 +28,16 @@ li:hover{
     background-color: aqua;
 }
 
+a{
+    text-decoration: none;
+}
+
+/* Modals */
+
 .modals{
     position: absolute;
     z-index: 15;
-    width: 70%;
+    width: 50%;
     height: 70%;
     top: 50%;
     left: 50%;
@@ -46,6 +52,38 @@ li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modal1{
+    background-image: url(../images/gohan-ssj2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.modal2{
+    background-image: url(../images/goku-freeza-lutando.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.modal3{
+    background-image: url(../images/goku-vegeta-goha-goten-trunks-shenlong-buu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.modal4{
+    background-image: url(../images/goku-ssj-blue-mais-goku-black-ssj-rose.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.modal4 h2{
+    cursor: pointer;
 }
 
 h2{

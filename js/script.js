@@ -33,6 +33,7 @@ if(wisheAboutGui){
         modalAboutGui.classList.remove('d-none');
         closeModal.classList.remove('d-none');
         modals.classList.remove('d-none');
+        console.log('abriu a modal 1');
     }
 };
 
@@ -41,6 +42,7 @@ if(wisheExperience){
         modalExperience.classList.remove('d-none');
         closeModal.classList.remove('d-none');
         modals.classList.remove('d-none');
+        console.log('abriu a modal 2');
     }
 };
 
@@ -49,6 +51,7 @@ if(wisheLenguage){
         modalLenguage.classList.remove('d-none');
         closeModal.classList.remove('d-none');
         modals.classList.remove('d-none');
+        console.log('abriu a modal 3');
     }
 };
 
@@ -57,6 +60,7 @@ if(wisheCV){
         downCV.classList.remove('d-none');
         closeModal.classList.remove('d-none');
         modals.classList.remove('d-none');
+        console.log('abriu a modal 4');
     }
 };
 
@@ -66,6 +70,7 @@ if(closeModal){
         modalAboutGui.classList.add('d-none');
         modalExperience.classList.add('d-none');
         modalLenguage.classList.add('d-none');
+        downCV.classList.add('d-none');
         modals.classList.add('d-none');
     }
 }
