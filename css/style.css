@@ -24,8 +24,12 @@ main{
     cursor: pointer;
 }
 
-li:hover{
-    background-color: aqua;
+.noDisc{
+    list-style-type: none;
+}
+
+ol li:hover{
+    background-color: white;
 }
 
 a{

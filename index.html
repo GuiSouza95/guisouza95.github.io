@@ -8,14 +8,14 @@
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Portifólio Guilherme</title>
+    <title>Portfólio Guilherme</title>
 </head>
 <body class="">
   <header>
     <nav class="navbar navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="./images/logoGuiDev.svg" class="img-fluid img-logo" alt="Logo Guilherme de Souza Dev portifólio">
+          <img src="./images/logoGuiDev.svg" class="img-fluid img-logo" alt="Logo Guilherme de Souza Dev portfólio">
         </a>
 
         <button id="buttonHamb" class="navbar-toggler mt-5 me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -24,33 +24,16 @@
 
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Lista de desejos</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
 
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Download CV</a>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
+              <li class="">Sobre o Gui</li>
+              <li class="">Experiências</li>
+              <li class="">linguagens</li>
+              <li class="">Download CV</li>
             </ul>
           </div>
         </div>
@@ -106,12 +89,32 @@
     
         <!-- modal sobre o Gui -->
         <div class="modal1 bg-primary bg-opacity-75 rounded text-center d-none">
-          <h2>Gui e foda</h2>
+          <div class="container w-75">
+            <div class="row">
+              <h2 class="bg-white rounded px-2">Sobre o Gui</h2>
+            </div>
+
+            <div class="row">
+              <p class="bg-white rounded px-2">Vou apresentar o Guilherme de Souza, ele é apaixonado por tecnologia, aprendizado contínuo e resolução de problemas. Atualmente, está em transição de carreira para o desenvolvimento web e mobile, com foco em criar soluções funcionais, bem estruturadas e com uma boa experiência para o usuário. Está sempre buscando evoluir como desenvolvedor e como pessoa, aprendendo novas ferramentas e colocando a mão na massa em projetos pessoais.</p>
+            </div>
+          </div>          
         </div>
 
         <!-- modal experiencia -->
         <div class="modal2 bg-primary bg-opacity-75 rounded text-center d-none">
-          <h2>trabalhou bastante</h2>
+          <div class="container w-75">
+            <div class="row">
+              <h2 class="bg-white rounded px-2">Experiências com código</h2>
+            </div>
+
+            <div class="row">
+              <p class="bg-white rounded px-2">Desenvolveu projetos pessoais em HTML, CSS e JavaScript (como este portfólio), além de experiências com ReactJS (<a href="https://guisouza95.github.io/portifolio_fotografia/" target="_blank">confira aqui</a>) e Laravel (em andamento).</p>
+              
+              <p class="bg-white rounded px-2">Ele está em transição de carreira para área de desenvolvimento, com foco em web e aplicações. Tem se dedicado aos estudos para aprimorar suas habilidades técnicas e construir soluções cada vez melhores.</p>
+
+              <p class="bg-white rounded px-2">Gui está em busca da sua primeira oportunidade profissional na área de tecnologia. Com dedicação, disciplina e vontade de aprender, está pronto para contribuir em projetos, crescer com a equipe e entregar resultados com qualidade e responsabilidade.</p>
+            </div>
+          </div>          
         </div>
 
         <!-- modal linguagens -->
@@ -120,17 +123,19 @@
             <div class="row">
               <div class="col">
                 <h2>
-                  <span class="bg-white rounded">O gui tem o conhecimento de algumas linguagens:</span>
+                  <span class="bg-white rounded px-2">Ele conhece as linguagens:</span>
                 </h2>
               </div>
             </div>
 
             <div class="row mt-2">
               <ul>
-                <li><span class="bg-white rounded">HTML, CSS, JS</span></li>
-                <li><span class="bg-white rounded">ReactJS</span></li>
-                <li><span class="bg-white rounded">Laravel</span></li>
-                <li><span class="bg-white rounded">Java</span></li>
+                <li class="noDisc"><span class="bg-white rounded px-2 fs-5">HTML, CSS, JS</span></li>
+                <li class="noDisc"><span class="bg-white rounded px-2 fs-5">ReactJS</span></li>
+                <li class="noDisc"><span class="bg-white rounded px-2 fs-5">Laravel</span></li>
+                <li class="noDisc"><span class="bg-white rounded px-2 fs-5">C/C++</span></li>
+                <li class="noDisc"><span class="bg-white rounded px-2 fs-5">Java</span></li>
+                <li class="noDisc"><span class="bg-white rounded px-2 fs-5">MySQL/MySQL server</span></li>
               </ul>
             </div>
           </div>
